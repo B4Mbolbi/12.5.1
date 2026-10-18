@@ -1,0 +1,13 @@
+@import url(components/map.css);
+@import url(components/popup.css);
+@import url(components/iconcar.css);
+@import url(components/coords.css);
+
+
+/* Карта должна занимать весь экран */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

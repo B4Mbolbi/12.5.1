@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>12.5.1</title>
+
+    <!-- Подключаем Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+</head>
+<!--  -->
+
+<body>
+
+    <!-- Вот сюда вставится карта -->
+    <div id="map"></div>
+
+    <!-- Плашка для вывода координат -->
+    <div id="coords-panel">
+        <div class="coord-row">
+            <span class="coord-label">Широта:</span>
+            <span id="lat-value">--.-----</span>
+            <span id="lat-delta">0.000000</span>
+        </div>
+        <div class="coord-row">
+            <span class="coord-label">Долгота:</span>
+            <span id="lng-value">--.-----</span>
+            <span id="lng-delta">0.000000</span>
+        </div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

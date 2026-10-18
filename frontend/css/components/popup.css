@@ -1,0 +1,58 @@
+/* =========================================
+   КАСТОМИЗАЦИЯ ПОПАПА (окошка на карте)
+   ========================================= */
+:root {
+    --color-bg-popup: #444;
+    --color-text: #ffe600;
+}
+
+
+.leaflet-popup {
+    z-index: 1000 !important;
+    margin-bottom: 20px;
+}
+
+/* 1. Само облачко (фон, рамка, тень) */
+.leaflet-popup-content-wrapper {
+    background: var(--color-bg-popup) !important;
+    /* Темный фон */
+    color: var(--color-text) !important;
+    /* Белый текст */
+    /* border: 1px solid #8b5cf6 !important; */
+    /* Фиолетовая рамка */
+    border-radius: 12px !important;
+    /* Скругленные углы */
+    /* box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4) !important; */
+    /* Неоновая тень */
+    cursor: pointer;
+    pointer-events: auto;
+
+}
+
+/* 2. Текст внутри */
+.leaflet-popup-content {
+    margin: 12px 16px !important;
+    font-family: 'Rajdhani', sans-serif;
+    /* Если подключишь шрифт */
+    font-size: 12px;
+    line-height: 1.5;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 3. Хвостик облачка (стрелочка вниз) */
+.leaflet-popup-tip {
+    display: none;
+    background: var(--color-bg-popup) !important;
+    border: 1px solid #8b5cf6 !important;
+    border-top: none !important;
+    border-left: none !important;
+    box-shadow: inset 0px 0px 5px #000000;
+}
+
+
+
+/* 4. Кнопка закрытия (крестик) */
+.leaflet-popup-close-button {
+    display: none !important;
+}
