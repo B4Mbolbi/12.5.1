@@ -1,13 +1,15 @@
-// 1. Импортируем с указанием "./"
-import { initMap } from './storage/map/map.js';
-import { getLocation} from './utils/geo.js';
+/**
+ * Точка входа фронтенд-приложения.
+ * Инициализирует карту и запускает GPS-трекинг.
+ */
 
-console.log("Скрипт запущен!");
+import { initMap } from "./storage/map/map.js";
+import { startGpsTracking } from "./tracker/gps.js";
 
-// 2. Создаём карту и сохраняем её в переменную
+console.log("🚀 Скрипт запущен!");
+
+// 1. Создаём карту
 const myMap = initMap();
 
-// 3. Передаём карту в функцию GPS
-getLocation(myMap);
-// fakegetLOcation(myMap)
-
+// 2. Запускаем отслеживание GPS
+startGpsTracking(myMap);
